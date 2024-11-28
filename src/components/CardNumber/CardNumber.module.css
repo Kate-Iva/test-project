@@ -1,0 +1,56 @@
+.container {
+    margin: 20px 0;
+    background: rgba(23, 183, 208, 0.04);
+  }
+  .labelContainer {
+    display: flex;
+    align-items: center; /* Вирівнювання по центру */
+    color: rgba(6, 34, 48, 0.8);
+  }
+  .title {
+    margin-right: 10px; /* Відстань між заголовком та інпутом */
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .inputContainer {
+    display: flex;
+    align-items: center; 
+   width: 605px;
+   height: 60px;
+   background: none;
+
+    border-radius: 4px; /* Закруглені кути */
+    padding: 5px; /* Відступи всередині контейнера */
+  }
+  .inputIcon {
+    display: flex;
+    align-items: center;
+ 
+  }
+  .button {
+    width: 30px; /* Ширина кнопок */
+    height: 30px; /* Висота кнопок */
+    font-size: 20px; /* Розмір шрифту */
+    cursor: pointer;
+    background: none; /* Без фону */
+    border: none; /* Без рамки */
+    color: #00B0CB;
+    padding: 0;
+  }
+  .input {
+    width: 60px; /* Ширина інпуту */
+    text-align: center; /* Центрування тексту */
+    border: none; /* Без рамки */
+    outline: none; /* Без обводки */
+    border: 1px solid #d9d9d9; /* Рамка */
+    width: 425px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgba(6, 34, 48, 0.8);
+    
+  }
+  .input::-webkit-inner-spin-button,
+  .input::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Приховує стандартні стрілочки для веб-контейнерів */
+  }
