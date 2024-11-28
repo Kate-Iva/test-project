@@ -14,6 +14,8 @@ const CardForm = () => {
         <Form className={styles.flexBox}>
           <CardType label="Тип тренування:" name="trainingType" />
 
+
+
           <div className={styles.btnBlock}>
           <Button label="Старт!" />
           </div>
