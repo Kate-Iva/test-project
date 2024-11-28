@@ -1,15 +1,10 @@
 import { useState } from 'react';
 import { useField } from 'formik';
-import { AiFillCaretDown } from 'react-icons/ai'; // Іконка для стрілочки
+import { AiFillCaretDown } from 'react-icons/ai';
 import styles from './CardType.module.css';
-const CardType = ({ label, ...props }) => {
+const CardType = ({ label, options, ...props }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [field] = useField(props);
-  const options = [
-    { value: 'numbers', label: 'Запам\'ятовування чисел' },
-    { value: 'words', label: 'Запам\'ятовування слів' },
-    { value: 'images', label: 'Запам\'ятовування картинок' },
-  ];
   const handleSelect = (value) => {
     field.onChange({ target: { name: field.name, value } });
     setIsOpen(false);
