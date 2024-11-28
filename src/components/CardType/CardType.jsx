@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useField } from 'formik';
-import { FaChevronDown } from 'react-icons/fa'; // Іконка для стрілочки
+import { AiFillCaretDown } from 'react-icons/ai'; // Іконка для стрілочки
 import styles from './CardType.module.css';
 const CardType = ({ label, ...props }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +24,7 @@ const CardType = ({ label, ...props }) => {
           onBlur={() => setIsOpen(false)}
         >
           {options.find(option => option.value === field.value)?.label || options[0].label}
-          <FaChevronDown className={`${styles.icon} ${isOpen ? styles.opened : ''}`} />
+          <AiFillCaretDown className={`${styles.icon} ${isOpen ? styles.opened : ''}`} />
         </div>
       </div>
       {isOpen && (
