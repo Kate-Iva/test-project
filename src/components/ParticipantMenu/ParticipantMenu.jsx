@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom'; // Імпорт Link для навігації
-import styles from './ParticipantMenu.module.css'; // Стилі для меню
+import { Link } from 'react-router-dom'; 
+import styles from './ParticipantMenu.module.css'; 
+
 const ParticipantMenu = () => {
   return (
     <div className={styles.participantMenu}>
@@ -9,6 +10,9 @@ const ParticipantMenu = () => {
       </Link>
       <Link to="/result">
         <button className="menuButton">Результати</button>
+      </Link>
+      <Link to="/">
+        <button className="menuButton">Home</button>
       </Link>
     </div>
   );
