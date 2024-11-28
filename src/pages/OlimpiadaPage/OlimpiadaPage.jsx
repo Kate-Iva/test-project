@@ -7,7 +7,7 @@ import styles from './OlimpiadaPage.module.css';
 const HomePage = () => {
 
     return (
-      <div className={styles.olimpiadaPage}>
+      <div className={styles.container}>
 <CardHeader title="Підготовка до олімпіади"/>
 <CardForm />
 
