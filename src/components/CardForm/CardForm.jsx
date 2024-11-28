@@ -13,7 +13,10 @@ const CardForm = () => {
       {() => (
         <Form className={styles.flexBox}>
           <CardType label="Тип тренування:" name="trainingType" />
-          <Button label="Старт" />
+
+          <div className={styles.btnBlock}>
+          <Button label="Старт!" />
+          </div>
         </Form>
       )}
     </Formik>
