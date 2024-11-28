@@ -8,7 +8,7 @@ const HomePage = () => {
 
     return (
       <div className={styles.olimpiadaPage}>
-<CardHeader />
+<CardHeader title="Підготовка до олімпіади"/>
 <CardForm />
 
       </div>
