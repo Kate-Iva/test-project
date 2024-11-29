@@ -1,9 +1,26 @@
+.flexBox{
+    width: 850px;
+}
+
 .btnBlock {
     margin-top: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .timeOptionsBlock{
     display: flex;
+    margin: 10px;
+    background: rgba(23, 183, 208, 0.04);
+    border-radius: 16px;
+    margin: 15px;
+
+}
+.timeOptionsWrap {
+    display: flex;
+    justify-content: space-between;
+}
+.timeInput {
+    width: 130px;
 }

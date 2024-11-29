@@ -17,7 +17,7 @@ const CardNumber = ({ title }) => {
 
       <div  className={styles.box}>
         <Button onClick={handleDecrease} icon={<AiOutlineMinus />} className={styles.buttonMinus}/>
-        <Input value={value} readOnly style={{ width: '305px', textAlign: 'center' }} className={`${styles.input} ${styles.inputText}`}/>
+        <Input value={value} readOnly variant={false}  style={{ width: '305px', textAlign: 'center' }} className={`${styles.input} ${styles.inputText}`}/>
         <Button onClick={handleIncrease} icon={<AiOutlinePlus />} className={styles.buttonPlus}/>
       </div>
 </div>

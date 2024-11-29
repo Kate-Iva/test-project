@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { useField } from 'formik';
 import { Select } from 'antd';
 import { AiFillCaretDown } from 'react-icons/ai';
-import styles from './CardType.module.css';
+import styles from './CardTime.module.css';
 const { Option } = Select;
-const CardType = ({ label, options, ...props }) => {
+const CardTime = ({ label, options, ...props }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [field, , helpers] = useField(props);
   const handleChange = (value) => {
@@ -26,7 +26,7 @@ const CardType = ({ label, options, ...props }) => {
             className={styles.input}
             popupMatchSelectWidth={false} 
             variant={false} 
-            style={{ width: '425px' }}
+            style={{ width: '130px' }}
             dropdownStyle={{ maxHeight: '120px', overflowY: 'auto' }}
             onDropdownVisibleChange={handleDropdownVisibleChange}
             suffixIcon={<AiFillCaretDown className={`${styles.icon} ${isOpen ? styles.opened : ''}`} />}
@@ -46,4 +46,4 @@ const CardType = ({ label, options, ...props }) => {
     </div>
   );
 };
-export default CardType;
+export default CardTime;
