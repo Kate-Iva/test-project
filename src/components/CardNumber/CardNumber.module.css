@@ -1,56 +1,81 @@
 .container {
-    margin: 20px 0;
-    background: rgba(23, 183, 208, 0.04);
-  }
-  .labelContainer {
-    display: flex;
-    align-items: center; /* Вирівнювання по центру */
-    color: rgba(6, 34, 48, 0.8);
-  }
-  .title {
-    margin-right: 10px; /* Відстань між заголовком та інпутом */
-    font-size: 18px;
-    font-weight: bold;
-  }
-  .inputContainer {
-    display: flex;
-    align-items: center; 
-   width: 605px;
-   height: 60px;
-   background: none;
+  display: flex;
+  width: 80%;
+max-width: 1000px;
+background: rgba(23, 183, 208, 0.04);
+padding: 10px;
+text-align: center;
+border-radius: 16px;
 
-    border-radius: 4px; /* Закруглені кути */
-    padding: 5px; /* Відступи всередині контейнера */
-  }
-  .inputIcon {
-    display: flex;
-    align-items: center;
- 
-  }
-  .button {
-    width: 30px; /* Ширина кнопок */
-    height: 30px; /* Висота кнопок */
-    font-size: 20px; /* Розмір шрифту */
-    cursor: pointer;
-    background: none; /* Без фону */
-    border: none; /* Без рамки */
-    color: #00B0CB;
-    padding: 0;
-  }
-  .input {
-    width: 60px; /* Ширина інпуту */
-    text-align: center; /* Центрування тексту */
-    border: none; /* Без рамки */
-    outline: none; /* Без обводки */
-    border: 1px solid #d9d9d9; /* Рамка */
-    width: 425px;
-    height: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: rgba(6, 34, 48, 0.8);
-    
-  }
-  .input::-webkit-inner-spin-button,
-  .input::-webkit-outer-spin-button {
-    -webkit-appearance: none; /* Приховує стандартні стрілочки для веб-контейнерів */
-  }
+}
+
+.wrap {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+width: 100%;
+}
+.title {
+  display: flex;
+align-items: center;
+padding: 0px 10px;
+grid-row-start: 1;
+grid-column-start: 1;
+grid-row-end: 2;
+grid-column-end: 2;
+font-family: "One-Day", sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 16px;
+color: rgba(6, 34, 48, 0.8);
+}
+
+.box{
+  display: flex;
+  align-items: center;
+gap: 20px;
+
+}
+
+.buttonMinus, 
+.buttonPlus {
+  width: 50px;
+height: 20px;
+border: none;
+background: transparent;
+font-family: "One-Day", sans-serif;
+font-size: 28px;
+color: #00B0CB;
+padding-bottom: 5px;
+transition: all 0.5s ease-in-out;
+outline: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+user-select: none;
+position: relative;
+overflow: hidden;
+}
+ .input {
+  width: 305px;
+min-height: 40px;
+
+background: #FEFFFF;
+border: 1px solid rgba(119, 129, 146, 0.2);
+border-radius: 8px;
+font-family: "One-Day";
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 180%;
+text-align: center;
+letter-spacing: 0.02em;
+color: rgba(6, 34, 48, 0.8);
+outline: none;
+ }
+ .input:hover,
+ .input:focus {
+  outline: none;
+  border: 1px solid rgba(119, 129, 146, 0.2);
+ }
