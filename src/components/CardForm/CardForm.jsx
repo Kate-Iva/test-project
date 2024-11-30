@@ -6,8 +6,9 @@ import CardNumber from '../../components/CardNumber/CardNumber.jsx';
 import CardLevel from '../../components/CardLevel/CardLevel.jsx';
 import Button from '../../components/Button/Button.jsx';
 import typeOptions from '../../data/typeOptions.js';
-import difficultiOptions from '../../data/difficultyOptions.js'; // Зверніть увагу на правильне написання
+import difficultyOptions from '../../data/difficultyOptions.js';
 import timeOptions from '../../data/timeOptions.js';
+
 const CardForm = () => {
   return (
     <Formik
@@ -20,10 +21,10 @@ const CardForm = () => {
         evaluationLevel: 'Учень',
       }}
       onSubmit={(values) => {
-        console.log('Submitted values:', values);
+        console.log('Submitted values:', values); 
       }}
     >
-      {() => (
+      {({ setFieldValue }) => (
         <Form className={styles.flexBox}>
           <CardType
             label="Тип тренування:"
@@ -37,31 +38,30 @@ const CardForm = () => {
           <CardType
             label="Розрядність:"
             name="difficulty"
-            options={difficultiOptions} 
+            options={difficultyOptions}
           />
-          <CardNumber title="Кількість рядків:" name="rowsCount" />
-
-
+          <CardNumber
+            title="Кількість рядків:"
+            name="rowsCount"
+            setFieldValue={setFieldValue} 
+          />
           <div className={styles.timeOptionsBlock}>
-            <label htmlFor="rememberTime" 
-            className={styles.timeRemember}>
-              Запам´ятати за:</label>
-
+            <label htmlFor="rememberTime" className={styles.timeRemember}>
+              Запам`ятати за:
+            </label>
             <div className={styles.timeOptionsWrap}>
               <CardTime
                 name="rememberTime"
                 options={timeOptions}
               />
-                          <label htmlFor="recallTime" 
-            className={styles.timeRecall}>
-              Згадати за:</label>
+              <label htmlFor="recallTime" className={styles.timeRecall}>
+                Згадати за:
+              </label>
               <CardTime
-               
                 name="recallTime"
                 options={timeOptions}
               />
             </div>
-
           </div>
           <div className={styles.btnBlock}>
             <Button type="submit" label="Старт!" />

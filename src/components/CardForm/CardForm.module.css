@@ -11,7 +11,6 @@
 
 .timeOptionsBlock{
     display: flex;
-   /* justify-content: space-between;*/
     background: rgba(23, 183, 208, 0.04);
     border-radius: 16px;
     margin: 15px;
@@ -35,7 +34,6 @@ color: rgba(6, 34, 48, 0.8);
 align-items: center;
 margin-left: 0;
 width: 100%;
-/*margin-left: 20px;*/
 
 font-family: "One-Day", sans-serif;
 font-style: normal;
