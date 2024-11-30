@@ -20,12 +20,21 @@
   }
   .wrap {
     display: flex;
-    justify-content: space-between; 
+   /* justify-content: space-between; */
+   gap: 160px;
     width: 100%;
     align-items: center; 
   }
   .box {
     display: flex;
-    gap: 10px; /* Відступи між радіокнопками */
+  
     font-family: "One-Day", sans-serif;
+  }
+
+  .box span {
+    font-family: "One-Day", sans-serif;
+  }
+
+  .box label {
+    gap: 15px;
   }
