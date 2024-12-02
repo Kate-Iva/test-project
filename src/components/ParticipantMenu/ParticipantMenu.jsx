@@ -11,6 +11,9 @@ const ParticipantMenu = () => {
       <Link to="/result">
         <button className="menuButton">Результати</button>
       </Link>
+      <Link to="/calendar">
+        <button className="menuButton">Calendar</button>
+      </Link>
       <Link to="/">
         <button className="menuButton">Home</button>
       </Link>

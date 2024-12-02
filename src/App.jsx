@@ -4,6 +4,7 @@ import OlimpiadaPage from '../src/pages/OlimpiadaPage/OlimpiadaPage.jsx';
 import ResultPage from '../src/pages/ResultPage/ResultPage.jsx';
 import ParticipantMenu from '../src/components/ParticipantMenu/ParticipantMenu.jsx'; 
 import ParticipantPage from '../src/pages/ParticipantPage/ParticipantPage.jsx'; 
+import CalendarPage from '../src/pages/CalendarPage/CalendarPage.jsx'; 
 function App() {
   return (
     <Router>
@@ -13,7 +14,7 @@ function App() {
           <Routes>
             <Route path="/olimpiada" element={<OlimpiadaPage />} />
             <Route path="/result" element={<ResultPage />} />
-            
+            <Route path="/calendar" element={<CalendarPage />} />
             <Route path="/" 
             element={<ParticipantPage />} />
              
