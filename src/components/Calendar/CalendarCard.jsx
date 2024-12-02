@@ -2,26 +2,26 @@ import { useState } from 'react';
 import Calendar from 'react-calendar';
 import styles from './CalendarCard.module.css';
 const CalendarCard = () => {
-  const [value, onChange] = useState(new Date()); // Вибрана дата
-  const [activeMonth, setActiveMonth] = useState(new Date()); // Активний місяць для перегляду
-  // Функція для визначення, чи є день доступним
+  const [value, onChange] = useState(new Date()); 
+  const [activeMonth, setActiveMonth] = useState(new Date()); 
+  
   const tileClassName = ({ date, view }) => {
-    const selectedMonth = activeMonth.getMonth(); // Місяць з активної дати
-    const currentMonth = date.getMonth(); // Місяць з поточної дати
-    // Якщо день з іншого місяця, робимо його неактивним
+    const selectedMonth = activeMonth.getMonth(); 
+    const currentMonth = date.getMonth(); 
+    
     if (view === 'month' && selectedMonth !== currentMonth) {
-      return styles.disabledTile; // Додаємо клас для недоступних днів
+      return styles.disabledTile; 
     }
-    return null; // Активні дні залишаються без класу
+    return null; 
   };
-  // Визначення недоступних днів
+  
   const tileDisabled = ({ date }) => {
-    const selectedMonth = activeMonth.getMonth(); // Місяць з активної дати
-    return date.getMonth() !== selectedMonth; // Дні з інших місяців неактивні
+    const selectedMonth = activeMonth.getMonth(); 
+    return date.getMonth() !== selectedMonth; 
   };
-  // Обробник зміни активної дати (місяця)
+  
   const handleActiveDateChange = (newDate) => {
-    setActiveMonth(newDate); // Оновлюємо активну дату
+    setActiveMonth(newDate); 
   };
   return (
     <div className={styles.calendarContainer}>
@@ -29,12 +29,12 @@ const CalendarCard = () => {
         onChange={onChange}
         value={value}
         className={styles.calendar}
-        tileClassName={tileClassName} // Використання кастомної функції для класів
-        tileDisabled={tileDisabled} // Дні з інших місяців не клікабельні
+        tileClassName={tileClassName} 
+        tileDisabled={tileDisabled} 
         onActiveDateChange={({ activeStartDate }) => handleActiveDateChange(activeStartDate)} // Обробник зміни активної дати
       />
       <div className={styles.selectedDate}>
-        Вибрана дата: {value.toDateString()} {/* Відображення вибраної дати */}
+        Вибрана дата: {value.toDateString()} 
       </div>
     </div>
   );

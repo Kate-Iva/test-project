@@ -8,17 +8,23 @@
     font-size: 16px;
     color: #333;
   }
-  /* Стилі для недоступних днів */
+  
+ 
   .disabledTile {
-    background-color: rgba(200, 200, 200, 0.5); /* Прозорий фон */
-    color: rgba(100, 100, 100, 0.5); /* Прозорий текст */
-    pointer-events: none; /* Вимкнення клікабельності */
+  
+    color: rgba(100, 100, 100, 0.5); 
+    pointer-events: none;
   }
-  /* Вимкнення ховера для днів попереднього та наступного місяця */
+ 
   .react-calendar__tile--disabled {
-    pointer-events: none; /* Заборонити кліки */
+    pointer-events: none; 
   }
   .react-calendar__tile--disabled:hover {
-    background-color: rgba(200, 200, 200, 0.5); /* Прозорий фон без ховера */
-    color: rgba(100, 100, 100, 0.5); /* Прозорий текст без ховера */
+    background-color: rgba(200, 200, 200, 0.5); 
+    color: rgba(100, 100, 100, 0.5); 
+  }
+
+  
+  .react-calendar__month-view__days button {
+    border-radius: 50%;
   }
