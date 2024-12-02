@@ -1,12 +1,12 @@
 import styles from './CalendarPage.module.css'; 
-import Calendar from "../../components/Calendar/Calendar.jsx";
+import CalendarCard from "../../components/Calendar/CalendarCard.jsx";
 
 const CalendarPage = () => {
 
     return (
       <div className={styles.container}>
 <h1>Calendar</h1>
-<Calendar className={styles.calendar}/>
+<CalendarCard className={styles.calendar}/>
       </div>
     );
   };
