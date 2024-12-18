@@ -31,10 +31,10 @@ const CalendarCard = () => {
         className={styles.calendar}
         tileClassName={tileClassName} 
         tileDisabled={tileDisabled} 
-        onActiveDateChange={({ activeStartDate }) => handleActiveDateChange(activeStartDate)} // Обробник зміни активної дати
+        onActiveDateChange={({ activeStartDate }) => handleActiveDateChange(activeStartDate)} 
       />
       <div className={styles.selectedDate}>
-        Вибрана дата: {value.toDateString()} 
+        Обрана дата: {value.toDateString()} 
       </div>
     </div>
   );
